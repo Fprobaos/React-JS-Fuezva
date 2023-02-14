@@ -2,30 +2,23 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">Fuezva</Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className=''>
+      <Container clasnname=''>
+        <NavLink to='/'>Fuezva</NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Remeras</Nav.Link>
-            <Nav.Link href="#pricing">Zapatillas</Nav.Link>
-            <NavDropdown title="Pantalones" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Straight</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Skinny
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Carrot</NavDropdown.Item>
-              <NavDropdown.Divider />
-            </NavDropdown>
+            <NavLink to='/categoria/pantalones'>Pantalones</NavLink>
+            <NavLink to='/categoria/zapatillas'>Zapatillas</NavLink>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={2} href="#memes">
+            <Link to='/cart'>
               Tu bolsa 
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
