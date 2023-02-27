@@ -12,16 +12,17 @@ export const ItemDetail = ({info}) => {
 
             <div className="card-body">
                 <h2>
-                    {info.categoria}
+                    {info.category}
                 </h2>
-                <img src={info.foto} alt="foto" className="img-fluid border border-5 align-self-center"/>
+                <img src={info.photo} alt="foto" className="img-fluid border border-5 align-self-center"/>
 
             </div>
 
             <div className="card-footer">
-                Precio : {info.precio} 
+                Precio : {info.price} 
                 <Link to={`/detalle/${info.id}`}>
                 <button className="btn btn-primary">Detalle</button>
+                <button className='cart'>cart</button>
                 </Link>
             </div>
 

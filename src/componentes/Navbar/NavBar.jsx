@@ -1,8 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from 'react-router-dom';
+
+
 
 const NavBar = () => {
   return (
@@ -12,8 +13,8 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to='/categoria/pantalones'>Pantalones</NavLink>
-            <NavLink to='/categoria/zapatillas'>Zapatillas</NavLink>
+            <NavLink to='/category/pantalones'>Pantalones</NavLink>
+            <NavLink to='/category/zapatillas'>Zapatillas</NavLink>
           </Nav>
           <Nav>
             <Link to='/cart'>

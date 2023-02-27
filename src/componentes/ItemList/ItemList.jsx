@@ -1,7 +1,7 @@
 import React from 'react'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
-const ItemList = ({productos = []}) => {
+const ItemList = ({products = []}) => {
   return (
     <div style={{
         display: 'flex',
@@ -9,7 +9,7 @@ const ItemList = ({productos = []}) => {
         flexWrap: 'wrap',
     }}>
 
-    {productos.map(producto => <ItemDetail key={producto.id} info={producto}/> )}
+    {products.map(product => <ItemDetail key={product.id} info={product}/> )}
 
     </div>
   )

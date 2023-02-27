@@ -8,8 +8,7 @@ import { ItemDetailContainer } from './componentes/ItemDetailContainer/ItemDetai
 import { CartContainer } from './componentes/CartContainer/CartContainer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ItemDetail } from './componentes/ItemDetail/ItemDetail';
-import ItemList from './componentes/ItemList/ItemList';
+
 
 function App(){
 
@@ -19,8 +18,8 @@ function App(){
         <NavBar />
           <Routes>
             <Route path= '/' element={<ItemListContainer />}/>
-            <Route path= '/categoria/:idCategoria' element={<ItemListContainer />}/>
-            <Route path= '/detalle/:idProducto' element={<ItemDetailContainer/>}/>
+            <Route path= '/category/:idCategory' element={<ItemListContainer />}/>
+            <Route path= '/detalle/:idProduct' element={<ItemDetailContainer/>}/>
             <Route path= '/cart' element={<CartContainer />}/>
             <Route path= '*' element = {Navigate} to={'/'} />
           </Routes>
