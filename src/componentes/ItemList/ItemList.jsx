@@ -1,15 +1,15 @@
 import React from 'react'
-import { ItemDetail } from '../ItemDetail/ItemDetail'
+import Item from '../Item/Item'
 
 const ItemList = ({products = []}) => {
   return (
-    <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
+    <div style={{ 
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-evenly'
     }}>
 
-    {products.map(product => <ItemDetail key={product.id} info={product}/> )}
+    {products.map(product => <Item key={product.id} info={product}/> )}
 
     </div>
   )

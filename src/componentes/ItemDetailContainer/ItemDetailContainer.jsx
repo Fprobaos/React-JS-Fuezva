@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { gfetch } from '../gfetch/gFetch'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
-import ItemList from '../ItemList/ItemList'
+
 
 
 
@@ -31,14 +31,14 @@ export const ItemDetailContainer = () => {
        
 } }, [idProduct])
   
-console.log(idProduct)
+
 
   return (
       loading ? <h2>Cargando ....</h2> :
 
       <div>
     
-        <ItemList products={products} />
+        <ItemDetail products={products} />
 
       </div>
     )

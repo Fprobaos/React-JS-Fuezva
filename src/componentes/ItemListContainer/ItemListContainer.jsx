@@ -30,11 +30,6 @@ export const ItemListContainer = () => {
                 
          
  } }, [idCategory])
-
-
- 
-        
-console.log(idCategory)
         
 
     
@@ -42,7 +37,10 @@ console.log(idCategory)
   return (
             loading ? <h2>Cargando ....</h2> :
 
-        <div>
+        <div style={{
+            display: 'flex',
+            
+        }}>
             <ItemList products={products} />
             
         </div>
