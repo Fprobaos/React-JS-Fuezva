@@ -15,17 +15,16 @@ function App(){
 
 
     return(
-      
       <BrowserRouter>
           <CartContextProvider>
             <NavBar />
-              <Routes>
-                <Route path= '/' element={<ItemListContainer />}/>
-                <Route path= '/category/:idCategory' element={<ItemListContainer />}/>
-                <Route path= '/detalle/:idProduct' element={<ItemDetailContainer/>}/>
-                <Route path= '/cart' element={<CartContainer />}/>
-                <Route path= '*' element = {Navigate} to={'/'} />
-              </Routes>
+                <Routes>
+                  <Route path= '/' element={<ItemListContainer />}/>
+                  <Route path= '/category/:idCategory' element={<ItemListContainer />}/>
+                  <Route path= '/detalle/:idProduct' element={<ItemDetailContainer/>}/>
+                  <Route path= '/cart' element={<CartContainer />}/>
+                  <Route path= '*' element = {Navigate} to={'/'} />
+                </Routes>
           </CartContextProvider>
         </BrowserRouter>
       )

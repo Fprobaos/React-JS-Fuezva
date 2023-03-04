@@ -13,8 +13,9 @@ export const ItemListContainer = () => {
 
     const { idCategory } = useParams()
     
-
+ 
     useEffect(() => {
+
         if (idCategory){
             gfetch()
             .then(res => 
@@ -32,7 +33,7 @@ export const ItemListContainer = () => {
  } }, [idCategory])
         
 
-    
+    console.log(products)
 
   return (
             loading ? <h2>Cargando ....</h2> :
