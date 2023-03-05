@@ -8,7 +8,9 @@ const Item = memo(({product}) => {
     <div className='card w-25 mt-5 ml-5' style={
         { 
         display: 'flex',
-        margin: 5, }}>
+        margin: 5,
+        border: 'solid',
+        borderRadius: '5px' }}>
 
             <div className='card-header'>
                 <h3>

@@ -7,17 +7,20 @@ import ItemCount from '../ItemCount/ItemCount'
 
 
 const ItemDetail = ({product}) => {
-  
-const [isCount, setIsCount] = useState(true)
 
-const {agregarCarrito} = useCartContext()
+  const [isCount, setIsCount] = useState(true)
+ 
 
-const onAdd = (cant) => {
+  const { agregarCarrito } = useCartContext()
+
+  const onAdd = (cant)=>{
       console.log(cant)
-      agregarCarrito({ ...product, cantidad: cant })
+ 
+      agregarCarrito( { ...product, cantidad: cant } )
       setIsCount(false)
-      
-    }
+  }  
+
+ 
 
   return (
     <div className='card w-25 mt-5 ml-5' style={

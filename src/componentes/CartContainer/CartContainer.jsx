@@ -6,16 +6,10 @@ import { useCartContext } from '../../Context/CartContext'
 export const CartContainer = () => {
 
  const { cartList, vaciarCarrito } = useCartContext()
- const [empty, setEmpty ] = useState(true)
-
-
- 
 
 
   return (
-    empty ? 
-    <h1>No tenes items en tu carrito</h1>
-    :
+    
 
     <div style={{
       display: 'flex',
@@ -44,6 +38,7 @@ export const CartContainer = () => {
 
             </div>
         ))}
+
 
       <footer>
         <button type='submit'>Realizar Pedido</button>
