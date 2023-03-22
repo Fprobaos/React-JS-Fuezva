@@ -24,7 +24,6 @@ function App(){
                   <Route path= '/category/:idCategory' element={<ItemListContainer />}/>
                   <Route path= '/detalle/:idProduct' element={<ItemDetailContainer/>}/>
                   <Route path= '/cart' element={<CartContainer />}/>
-                  <Route path= '/cart/:idOrder' element={<OrderConfirmation />}/>
                   <Route path= '*' element = {Navigate} to={'/'} />
                 </Routes>
           </CartContextProvider>
