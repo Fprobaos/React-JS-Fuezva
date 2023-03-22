@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react"
 import { useCartContext } from "../../Context/CartContext"
 
 const CartWidget = () => {
 
-  const {cantidadTotal} = useCartContext()
+  const {totalQuant} = useCartContext()
   
 
   return (
@@ -17,7 +16,7 @@ const CartWidget = () => {
                 
                 }}/>
         
-        {cantidadTotal() !== 0 && cantidadTotal()}
+        {totalQuant() !== 0 && totalQuant()}
         
     </div>
   )

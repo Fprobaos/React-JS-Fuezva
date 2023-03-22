@@ -9,6 +9,7 @@ import { CartContainer } from './componentes/CartContainer/CartContainer';
 import { CartContextProvider } from './Context/CartContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import OrderConfirmation from './componentes/OrderConfirmation/OrderConfirmation';
 
 
 function App(){
@@ -23,6 +24,7 @@ function App(){
                   <Route path= '/category/:idCategory' element={<ItemListContainer />}/>
                   <Route path= '/detalle/:idProduct' element={<ItemDetailContainer/>}/>
                   <Route path= '/cart' element={<CartContainer />}/>
+                  <Route path= '/cart/:idOrder' element={<OrderConfirmation />}/>
                   <Route path= '*' element = {Navigate} to={'/'} />
                 </Routes>
           </CartContextProvider>

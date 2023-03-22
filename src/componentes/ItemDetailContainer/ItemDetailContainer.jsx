@@ -11,21 +11,22 @@ import { Loading } from '../Loading/Loading'
 
 export const ItemDetailContainer = () => {
 
+  
   const [product, setProduct ] = useState({})
- 
   const [loading, setLoading ] = useState(true)
   const { idProduct } = useParams()
-
-  useEffect(()=>{        
-    const db = getFirestore() 
-    const query = doc(db, 'items', idProduct)
-    getDoc(query)
-    .then( res => setProduct( { id: res.id, ...res.data() } ))
-    .finally(setLoading(false))
-    
-}, [])
-
   
+  useEffect(()=>{        
+    
+    const db = getFirestore() 
+    const query = doc(db , 'productos', idProduct)
+    getDoc(query)
+    .then( res => setProduct({id : res.id, ...res.data()}))
+    .catch(err => console.log(err))
+    .finally(setLoading(false))
+  
+}, [idProduct])
+
 
   return (
       loading ? <Loading /> :

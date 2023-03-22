@@ -11,12 +11,11 @@ const ItemDetail = ({product}) => {
   const [isCount, setIsCount] = useState(true)
  
 
-  const { agregarCarrito } = useCartContext()
+  const { addToCart } = useCartContext()
 
-  const onAdd = (cant)=>{
-      console.log(cant)
+  const onAdd = (quant)=>{
  
-      agregarCarrito( { ...product, cantidad: cant } )
+      addToCart( { ...product, quantity: quant } )
       setIsCount(false)
   }  
 

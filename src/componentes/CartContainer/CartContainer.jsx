@@ -1,50 +1,32 @@
-
-import { useEffect, useState } from 'react'
 import { useCartContext } from '../../Context/CartContext'
+import BlankCart from '../BlankCart/BlankCart'
+import CartList from '../CartList/CartList'
+import FormOrder from '../FormOrder/FormOrder'
 
 
 export const CartContainer = () => {
+  
+  const { cartList, emptyCart, totalPrice} = useCartContext()
 
- const { cartList, vaciarCarrito } = useCartContext()
-
-
+   
   return (
+    cartList.length == 0 ? <BlankCart /> :
     
+    <div style={ { display: 'flex', justifyContent: 'center', flexDirection:'column', margin: '5px'} } >  
 
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      flexDirection:'column',
+        <CartList cartList={cartList} />
 
-    }}>  
+      <center className='m-3'>
 
-        {cartList.map(product => (
-          <div key={product.id}  style={{
-            display:'flex',
-            margin: '15px',
-            border: 'solid',
-            borderRadius: '5px',
-            alignItems: 'center',
-            justifyContent:'space-between',
+        <p>{totalPrice() !== 0 && `Total del pedido: ${totalPrice()}`}</p>
+        <button onClick={emptyCart}>Vaciar Carrito</button>
 
-          }} >
-                <img src={product.photo} style={{
-                  display:'block',
-                  width: '150px'
-                }}/>
-                <p className='p-5'>
-                  Nombre: {product.name} - Cantidad: {product.cantidad} - Precio {product.price} 
-                </p>
-
-            </div>
-        ))}
-
-
-      <footer>
-        <button type='submit'>Realizar Pedido</button>
-        <button onClick={vaciarCarrito}>Vaciar Carrito</button>
-      </footer>
+      </center>
+      
+       <FormOrder /> 
+      
 
     </div>
-  )
-}
+
+    )
+  }
