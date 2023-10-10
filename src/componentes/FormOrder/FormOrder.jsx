@@ -1,11 +1,11 @@
 
-import { addDoc, collection, doc, getDoc, getFirestore } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react'
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useCartContext } from '../../Context/CartContext';
-import formorder from '../FormOrder/formorder.css'
 import swal from 'sweetalert';
+import formorder from '../FormOrder/formorder.css'
 
 
 

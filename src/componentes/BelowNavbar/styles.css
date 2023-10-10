@@ -1,0 +1,9 @@
+.belowNavContainer {
+  background: rgb(39, 62, 71);
+  background: radial-gradient(
+    circle,
+    rgba(39, 62, 71, 1) 0%,
+    rgba(126, 162, 201, 1) 64%,
+    rgba(216, 151, 60, 1) 100%
+  );
+}

@@ -1,0 +1,11 @@
+.footerContainer {
+  background-color: "#0B4F6C";
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.socialLogos {
+  background: transparent;
+  width: 40px;
+}

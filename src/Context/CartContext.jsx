@@ -13,23 +13,28 @@ export const CartContextProvider = ({children}) => {
         const [cartList, setCartList] = useState([])
 
         
-        let newCart
+       
 
         const addToCart = (newProduct) =>{
+           
+            const cartProduct = cartList.find(product => product.id === newProduct.id)
+            
+            let newCart;
+
             const idxProd = cartList.findIndex(product => product.id === newProduct.id)
+            
             if(idxProd!==-1){
                 cartList[idxProd].quantity += newProduct.quantity
                 
-                return(newCart= [...cartList, newProduct])
+                return(newCart = [...cartList, newProduct])
 
             }
 
-            let cartProduct = cartList.find(product => product.id === newProduct.id)
             
             if(cartProduct){
                 cartProduct.quantity += newProduct.quantity
                 
-                return(newCart= [...cartList])
+                return(newCart = [...cartList])
 
             }
             

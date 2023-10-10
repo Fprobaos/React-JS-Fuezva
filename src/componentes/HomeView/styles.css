@@ -1,0 +1,6 @@
+.homeViewContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #cbb9a8;
+}

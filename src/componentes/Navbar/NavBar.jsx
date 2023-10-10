@@ -1,31 +1,46 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink } from 'react-router-dom';
-import CartWidget from '../CartWidget/CartWidget';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from "react-router-dom";
 
-
+import { NavbarBrand } from "react-bootstrap";
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className=''>
-      <Container clasnname=''>
-        <NavLink to='/'>Fuezva</NavLink>
+    <Navbar
+      collapseOnSelect
+      style={{
+        display: "flex",
+        height: "90px",
+        backgroundColor: "#0B4F6C",
+      }}
+      className="col-12 "
+    >
+      <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <NavbarBrand href="/" style={{ color: "#A5FFD6" }}>
+          Brand or Logo
+        </NavbarBrand>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to='/category/Botines' className='p-2'>Botines</NavLink>
-            <NavLink to='/category/Zapatillas' className='p-2'>Zapatillas</NavLink>
-          </Nav>
-          <Nav>
-            <Link to='/cart'>
-              <CartWidget />
-            </Link>
+            <NavLink
+              to="/category/Botines"
+              className="p-2"
+              style={{ color: "#A5FFD6" }}
+            >
+              Portfolio
+            </NavLink>
+            <NavLink to="" className="p-2" style={{ color: "#A5FFD6" }}>
+              My Business
+            </NavLink>
+            <NavLink to="" className="p-2" style={{ color: "#A5FFD6" }}>
+              Contact Me!
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavBar;
