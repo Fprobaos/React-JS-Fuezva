@@ -18,23 +18,38 @@ const NavBar = () => {
     >
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <NavbarBrand href="/" style={{ color: "#A5FFD6" }}>
+        <NavbarBrand href="/" style={{ color: "#A5FFD6", fontSize: "35px" }}>
           Brand or Logo
         </NavbarBrand>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto d-flex">
             <NavLink
               to="/category/Botines"
               className="p-2"
-              style={{ color: "#A5FFD6" }}
+              style={{ color: "#A5FFD6", fontSize: "20px" }}
             >
               Portfolio
             </NavLink>
-            <NavLink to="" className="p-2" style={{ color: "#A5FFD6" }}>
+            <NavLink
+              to=""
+              className="p-2"
+              style={{ color: "#A5FFD6", fontSize: "20px" }}
+            >
               My Business
             </NavLink>
-            <NavLink to="" className="p-2" style={{ color: "#A5FFD6" }}>
+            <NavLink
+              to=""
+              className="p-2"
+              style={{ color: "#A5FFD6", fontSize: "20px" }}
+            >
               Contact Me!
+            </NavLink>
+            <NavLink
+              to=""
+              className="p-2"
+              style={{ color: "#A5FFD6", fontSize: "25px" }}
+            >
+              + 1 3541234567
             </NavLink>
           </Nav>
         </Navbar.Collapse>

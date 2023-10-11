@@ -2,6 +2,8 @@ import React from "react";
 
 import "./styles.css";
 import AppointmentForm from "../AppointmentForm";
+import { Button } from "react-bootstrap";
+import Services from "../Services";
 
 const HomeView = () => {
   return (
@@ -15,20 +17,30 @@ const HomeView = () => {
         }}
       >
         <AppointmentForm />
-        <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, atque
-          esse numquam temporibus quam optio ex magnam libero cum fugiat
-          doloribus, quaerat ipsa quo id quod ducimus est voluptatum delectus.
-        </p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h2 className="subtitle">What do we do?</h2>
+          <p style={{ margin: "20px", textAlign: "center" }}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, atque
+            esse numquam temporibus quam optio ex magnam libero cum fugiat
+            doloribus, quaerat ipsa quo id quod ducimus est voluptatum delectus.
+          </p>
+          <Services />
+        </div>
 
         <img
-          src="../../public/assets/photoindex1.jpeg"
+          src="../../public/assets/Plumber Background.jpg"
           alt=""
           className=""
           style={{
-            width: "250px",
-            margin: "20px",
-            borderStyle: "hidden",
+            width: "400px",
+            height: "300px",
             borderRadius: "40px",
           }}
         />
@@ -38,8 +50,10 @@ const HomeView = () => {
         <section
           className=""
           style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
             margin: "25px",
-            width: "250px",
           }}
         >
           <p>
@@ -48,14 +62,7 @@ const HomeView = () => {
             error libero, perferendis tempore, qui facilis quasi nam ad voluptas
             temporibus labore fuga!
           </p>
-        </section>
-        <section
-          className="col-12"
-          style={{
-            margin: "25px",
-            width: "250px",
-          }}
-        >
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi porro
             sint corporis hic quibusdam quaerat quos commodi fuga asperiores,

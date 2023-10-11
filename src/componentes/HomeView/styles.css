@@ -4,3 +4,11 @@
   flex-wrap: wrap;
   background-color: #cbb9a8;
 }
+
+.subtitle {
+  text-align: center;
+  font-size: 40px;
+}
+
+.buttonStyle {
+}
